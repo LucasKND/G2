@@ -1,0 +1,23 @@
+/* Clients Intro Section Styles */
+
+.clients-intro {
+    padding: 80px 0 40px;
+    background-color: white;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro-text p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.intro-text p:last-child {
+    margin-bottom: 0;
+}

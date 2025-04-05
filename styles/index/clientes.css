@@ -1,0 +1,60 @@
+/* Clients Section Styles */
+
+.destaques-clientes {
+    padding: 80px 0;
+    background-color: var(--background-light);
+    text-align: center;
+}
+
+.destaques-clientes h2 {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.logos-clientes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.logos-clientes.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.logo-cliente {
+    width: 150px;
+    height: 100px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.logo-cliente:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(11, 79, 139, 0.15);
+}
+
+.logo-cliente img {
+    max-width: 100%;
+    max-height: 100%;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.logo-cliente:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}

@@ -1,0 +1,113 @@
+/* Header Section Styles */
+
+header {
+    background-color: var(--primary-color); /* Changed from white to primary color */
+    box-shadow: var(--box-shadow);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styles updated for image-based logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    max-width: 100%;
+    transition: var(--transition);
+}
+
+/* Navigation styles - updated for contrast with dark background */
+nav ul {
+    display: flex;
+    gap: 30px; /* Main navigation gap */
+}
+
+
+nav ul li a {
+    color: white; /* Changed from dark-color to white for contrast */
+    font-weight: 500;
+    padding: 10px 0;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white; /* Changed to white for better visibility */
+    transition: var(--transition);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Instagram icon styling - updated to remove underline effect and red hover */
+nav ul li a i.fab.fa-instagram {
+    font-size: 1.4rem;
+    color: white;
+    transition: var(--transition);
+}
+
+nav ul li a:hover i.fab.fa-instagram {
+    transform: scale(1.2);
+}
+
+/* LinkedIn and Instagram icon styling */
+nav ul li a i.fab.fa-instagram,
+nav ul li a i.fab.fa-linkedin {
+    font-size: 1.4rem;
+    color: white;
+    transition: var(--transition);
+}
+
+nav ul li a:hover i.fab.fa-instagram {
+    transform: scale(1.2);
+}
+
+nav ul li a:hover i.fab.fa-linkedin {
+    transform: scale(1.2);
+}
+
+/* Special case for social media links - no underline */
+nav ul li a[href*="instagram"]::after,
+nav ul li a[href*="linkedin"]::after {
+    display: none; /* Remove the underline effect for social media links */
+}
+
+.btn-contato {
+    background-color: white; /* Changed for contrast against primary color background */
+    color: var(--primary-color) !important; /* Changed text color */
+    padding: 10px 20px !important;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.btn-contato:hover {
+    background-color: var(--accent-color);
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white; /* Changed to white for visibility */
+}

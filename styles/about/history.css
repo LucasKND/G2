@@ -1,0 +1,56 @@
+/* About History Section Styles */
+
+.about-history {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.history-wrapper {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.history-text {
+    flex: 1;
+}
+
+.history-text p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.history-text p:last-child {
+    margin-bottom: 0;
+}
+
+.history-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.history-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.history-image:hover img {
+    transform: scale(1.03);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .history-wrapper {
+        flex-direction: column;
+    }
+    
+    .history-image {
+        order: -1;
+        margin-bottom: 40px;
+    }
+}

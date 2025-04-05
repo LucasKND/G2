@@ -1,0 +1,32 @@
+/* Import section-specific styles */
+@import url('./hero.css');
+@import url('./intro.css');
+@import url('./cards.css');
+@import url('./process.css');
+@import url('./benefits.css');
+@import url('./testimonials.css');
+@import url('./faq.css');
+@import url('./cta.css');
+
+/* Active nav link style */
+nav ul li a.active::after {
+    width: 100%;
+}
+
+/* Mobile menu overrides for services page */
+@media (min-width: 768px) {
+    .mobile-menu-overlay {
+        display: none !important; /* Force hide on desktop */
+    }
+}
+
+/* Page-specific general styles */
+.section-title {
+    margin-bottom: 60px;
+}
+
+.section-title p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-top: -10px;
+}

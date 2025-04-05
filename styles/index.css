@@ -1,0 +1,47 @@
+/* Main CSS file importing all section-specific styles */
+@import url('./variables.css');
+@import url('./general.css');
+@import url('./utilities.css');
+
+/* Layout components */
+@import url('./index/header.css');
+@import url('./index/hero.css');
+@import url('./index/sobre.css');
+@import url('./index/servicos.css');
+@import url('./index/cta.css');
+@import url('./index/clientes.css');
+@import url('./index/contato.css');
+@import url('./index/footer.css');
+
+/* Responsive styles */
+@import url('./responsive.css');
+
+/* Base styles for the entire document */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}

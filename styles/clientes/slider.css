@@ -1,0 +1,108 @@
+/* Infinite Slider Section Styles */
+
+.clients-slider {
+    padding: 60px 0;
+    background-color: var(--background-light);
+    overflow: hidden;
+}
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 30px 0;
+    position: relative;
+}
+
+/* Add gradient fade effects on the sides */
+.slider-container::before,
+.slider-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 2;
+}
+
+.slider-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--background-light), transparent);
+}
+
+.slider-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--background-light), transparent);
+}
+
+.slider-track {
+    display: flex;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 30s;
+    width: fit-content;
+}
+
+/* Right-moving animation */
+.slider-container.right .slider-track {
+    animation-name: slide-right;
+}
+
+/* Left-moving animation */
+.slider-container.left .slider-track {
+    animation-name: slide-left;
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.slide {
+    min-width: 200px;
+    height: 120px;
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slide:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(11, 79, 139, 0.15);
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 80px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.slide:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Pause animation on hover */
+.slider-container:hover .slider-track {
+    animation-play-state: paused;
+}

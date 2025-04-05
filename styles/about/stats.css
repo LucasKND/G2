@@ -1,0 +1,55 @@
+/* Stats Section Styles */
+
+.stats-section {
+    padding: 80px 0;
+    background-image: linear-gradient(rgba(0, 37, 84, 0.85), rgba(0, 37, 84, 0.85)), 
+                      url('https://images.unsplash.com/photo-1611095567319-2f4c389168a9?ixlib=rb-4.0.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+.stats-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.stat-box {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-10px);
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+    font-family: var(--font-primary);
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 767.98px) {
+    .stats-wrapper {
+        flex-direction: column;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}

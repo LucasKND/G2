@@ -1,0 +1,50 @@
+/* About Hero Section Styles */
+
+.about-hero {
+    background-image: linear-gradient(rgba(0, 37, 84, 0.8), rgba(0, 37, 84, 0.8)), 
+                      url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 140px 0 80px;
+    position: relative;
+}
+
+.about-hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about-hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+.about-hero .breadcrumb {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.about-hero .breadcrumb a {
+    color: var(--accent-color);
+    transition: var(--transition);
+}
+
+.about-hero .breadcrumb a:hover {
+    color: white;
+}
+
+.about-hero .breadcrumb .separator {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Removed the wave shape at the bottom of the hero */

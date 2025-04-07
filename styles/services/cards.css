@@ -34,7 +34,7 @@
 
 .card-image {
     flex: 1;
-    min-height: 350px;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -125,4 +125,122 @@
     background-color: var(--secondary-color);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(11, 79, 139, 0.2);
+}
+
+/* Responsive styles for tablets and mobile devices */
+@media screen and (max-width: 992px) {
+    .service-detailed-card {
+        flex-direction: column !important; /* Override alternating layout */
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card-image {
+        display: none; /* Hide images on tablet and mobile */
+    }
+    
+    .card-content {
+        padding: 30px;
+        order: 1; /* Place content (title + text) first */
+        display: flex;
+        flex-direction: column;
+        width: 100%; /* Take full width since image is hidden */
+    }
+    
+    .card-content h3,
+    .card-content > p {
+        order: 1; /* Keep title and main paragraph at the top */
+    }
+    
+    .card-content h4,
+    .card-content ul,
+    .btn-service {
+        order: 2; /* Services included section comes right after intro text */
+    }
+    
+    .card-content h3 {
+        font-size: 1.6rem;
+    }
+    
+    /* Adjust service card header layout */
+    .card-content .service-icon {
+        display: inline-flex;
+        vertical-align: middle;
+        margin-right: 15px;
+        margin-bottom: 0;
+    }
+    
+    .card-content h3 {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1.6rem;
+        white-space: nowrap; /* Prevent wrapping */
+    }
+    
+    /* Add a container to keep icon and title together */
+    .card-content .service-icon + h3 {
+        margin-top: 10px; /* Add some spacing between the icon+title and the following text */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .service-cards {
+        padding: 40px 0;
+    }
+    
+    .cards-wrapper {
+        gap: 30px;
+    }
+    
+    .card-image {
+        height: 250px; /* Smaller height for mobile */
+    }
+    
+    .card-content {
+        padding: 25px 20px;
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .service-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .card-content h3 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+    
+    .card-content p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    
+    .card-content h4 {
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+    
+    .card-content ul li {
+        margin-bottom: 8px;
+    }
+    
+    .btn-service {
+        width: 100%;
+        text-align: center;
+        padding: 10px 20px;
+    }
+    
+    .card-content .service-icon {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    
+    .card-content h3 {
+        font-size: 1.3rem;
+    }
 }
